@@ -161,9 +161,9 @@ const nlpTrainer = async () => {
   console.log("NLP Trained!")
 }
 
-(async () => {
-  await nlpTrainer()
-})();
+// (async () => {
+//   await nlpTrainer()
+// })();
 
 // Get PORT and start the server
 app.listen(config.port, function () {

@@ -12,7 +12,3 @@
 "https://www.{default}/":
     type: redirect
     to: "https://{default}/"
-
-"https://www.{default}/getProducts":
-    type: redirect
-    to: "https://{default}/getProducts"

@@ -19,9 +19,9 @@ dotenv.config({
 });
 
 
-app.get('/api/hello', (req, res) => res.send('Hello World!'));
+app.get('/', (req, res) => res.send('Hello World!'));
 
-app.get('/api/getProducts', async (req, res) => {
+app.get('/getProducts', async (req, res) => {
   let qtext = req?.query?.search || " ";
   res.json(await getProducts(qtext))
 });
@@ -61,11 +61,11 @@ const getProducts = async (qtext) => {
 }
 
 //-----------------------------NLP-----------------------------------------
-app.get('/api/trainnlp', async (req, res) => {
+app.get('/trainnlp', async (req, res) => {
   res.json(await nlpTrainer())
 });
 
-app.get('/api/getnlp', async (req, res) => {
+app.get('/getnlp', async (req, res) => {
   let qtext = req?.query?.nlp || " ";
   console.log(qtext)
   const response = await manager.process('en', qtext);
